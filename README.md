@@ -18,13 +18,13 @@ basieStructureForSomeFrontPage
 	2、html文件命名: 英文命名。 同时将相对应的设计稿效果图放于同目录中，保存命名和html文件同名，以方便其他人员的查询；
 	3、css文件命名: 英文命名。 共用base.css，其他页面依实际模块需求命名；
 	4、Js文件命名: 英文命名。 共用common.js，其他依实际模块需求命名。
-html书写规范
+HTML书写规范
 --------------------------
 	1、文档类型声明及编码:
-	<!doctype html>
+	<!DOCTYPE html>
 	<meta charset="utf-8"> 
 	2、头部标签必须添加：
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	3、非特殊情况下样式文件必须外链至<head>…</head>之间;非特殊情况下JavaScript文件必须外链至页面底部；
 	4、引入样式文件或JavaScript文件时，须略去默认类型声明
 	5、所有编码均遵循xhtml标准，必须由小写字母及下划线、数字或者一横杠线组成，且所有标签必须闭合，包括br，等; 属性值必须用双引号包括;
@@ -66,5 +66,5 @@ JavaScript书写规范
 --------------------------
 	1、所有页面元素类图片均放入images文件夹，测试用图片放于images/demo/文件夹;
 	2、命名全部用小写英文字母、数字、下划线或者横杠线的组合，尽量用易懂的词汇，便于团队其他成员理解; 另，命名分头尾两部分，用下划线隔开，比如icon_add.gif、btn_submit.gif;
-	4、在保证视觉效果的情况下选择最小的图片格式与图片质量，以减少加载时间，可以借助第三方软件或者工具对图片进行压缩;
+	3、在保证视觉效果的情况下选择最小的图片格式与图片质量，以减少加载时间，可以借助第三方软件或者工具对图片进行压缩;
 
