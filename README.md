@@ -1,4 +1,4 @@
-basieStructureForSomeFrontPage
+basicStructureForSomeFrontPage
 ==============================
 
 自适应插件前端开发规范
