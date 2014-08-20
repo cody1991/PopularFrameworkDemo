@@ -1,4 +1,4 @@
-basicStructureForSomeFrontPage
+流行的Web前端框架Demo
 ==============================
 
 自适应插件前端开发规范
