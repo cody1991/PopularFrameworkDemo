@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>fullPage</title>
+		<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+		<link rel="stylesheet" type="text/css" href="mypage.css" />
+		<style type="text/css">
+			#section0 img,
+			#section1 img{
+				margin: 20px 0 0 0;
+			}	
+			#section2 img{
+				margin: 20px 0 0 52px;	
+			}
+			#section3 img{
+				bottom: 0px;
+				position: absolute;
+				margin-left: -420px;
+			}
+			.intro p{
+				width: 50%;
+				margin: 0 auto;
+				font-size: 1.5em;
+			}
+			#header, #footer{
+				position:fixed;
+				height: 50px;
+				display:block;
+				width: 100%;
+				background: #333;
+				background: rgba(0,0,0,0.5);
+				z-index:9;
+				text-align:center;
+				color: #f2f2f2;
+				padding: 20px 0 0 0;
+			}
+			
+			#header{
+				top:0px;
+			}
+			#footer{
+				bottom:0px;
+			}
+
+
+
+			#section0{
+				background: -webkit-gradient(linear, top left, bottom left, from(#4bbfc3), to(#7baabe));
+				background: -webkit-linear-gradient(#4BBFC3, #7BAABE);
+				background: linear-gradient(#4BBFC3,#7BAABE);
+			}
+
+			#section2{
+				background: -webkit-gradient(linear, top left, bottom left, from(#969ac6), to(#636F8F));
+				background: -webkit-linear-gradient(#969AC6, #636F8F);
+				background: linear-gradient(#969AC6,#636F8F);
+			}
+			#slide1{
+				background: -webkit-gradient(linear, top left, bottom left, from(#7baabe), to(#969ac6));
+				background: -webkit-linear-gradient(#7BAABE, #969AC6);
+				background: linear-gradient(#7BAABE,#969AC6);
+			}
+			#slide2{
+				background: -webkit-gradient(linear, top left, bottom left, from(#92a1ca), to(#76c2bd));
+				background: -webkit-linear-gradient(#92a1ca, #76c2bd);
+				background: linear-gradient(#92a1ca,#76c2bd);
+			}
+			
+
+
+		</style>
+		<script src="http://www.playwx.com/hd/static/common/js/jquery-1.10.2.min.js"></script>
+		<script src="../jquery-ui.min.js"></script>
+
+		<script type="text/javascript" src="jquery.fullPage.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('fullpage').fullpage({
+					slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#ccddff'],
+					anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage'],
+					loopBottom:true,
+					loopTop:true
+				});
+			});
+		</script>
+	</head>
+	<body>
+
+		<div id="header">Header</div>
+		<div id="footer">Footer</div>
+
+
+
+		<div id="fullpage">
+
+			<div class="section " id="section0">
+				<h1>fullPage.js</h1>
+				<p>Create Beautiful Fullscreen Scrolling Websites</p>
+				<img src="imgs/fullPage.png" alt="fullPage" />
+			</div>
+
+
+			<div class="section" id="section1">
+			    <div class="slide" id="slide1">
+					<div class="intro">
+						<h1>Create Sliders</h1>
+						<p>Not only vertical scrolling but also horizontal scrolling. With fullPage.js you will be able to add horizontal sliders in the most simple way ever.</p>
+						<img src="imgs/slider.png" alt="slider" />
+					</div>
+				</div>
+
+			    <div class="slide" id="slide2">
+					<div class="intro">
+						<img src="imgs/1.png" alt="simple" />
+						<h1>Simple</h1>
+						<p>Easy to use. Configurable and customizable.</p>
+					</div>
+				</div>
+
+			    <div class="slide" id="slide1">
+					<div class="intro">
+						<img src="imgs/2.png" alt="Cool" />
+						<h1>Cool</h1>
+						<p>It just looks cool. Impress everybody with a simple and modern web design!</p>
+					</div>
+				</div>
+
+			    <div class="slide" id="slide2">
+					<div class="intro">
+						<img src="imgs/3.png" alt="Compatible" />
+						<h1>Compatible</h1>
+						<p>Working in modern and old browsers too! IE 8 users don't have the fault of using that horrible browser! Lets give them a chance to see your site in a proper way!</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="section" id="section2">
+				<div class="intro">
+					<h1>Example</h1>
+					<p>HTML markup example to define 4 sections.</p>
+					<img src="imgs/example2.png" alt="example" />
+				</div>
+			</div>
+
+			<div class="section" id="section3">
+				<div class="intro">
+					<h1>Working On Tablets</h1>
+					<p>
+						Designed to fit to different screen sizes as well as tablet and mobile devices.
+						<br /><br /><br /><br /><br /><br />
+					</p>
+				</div>
+				<img src="imgs/tablets.png" alt="tablets" />
+			</div>
+
+		</div>
+
+		
+	</body>
+</html>
