@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>fullPage</title>
+		<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+		<link rel="stylesheet" type="text/css" href="mypage.css" />
+		<style type="text/css">
+			#section0 img{
+				margin:20px 0 0 0;
+			}	
+			#slide1 img,#section2 img{
+				position:relative;
+				left:-130%;
+			}
+			#slide1 h1,#slide1 p
+			,#section2 h1,#section2 p{
+				position:relative;
+				left:-130%;
+			}
+			#section2 img{
+				margin: 20px 0 0 52px;	
+			}
+
+
+			#section3 h1,#section3 p{
+				top:150px;
+				position:relative;
+				left:-130%;
+			}
+			#section3 img{
+				top:50px;
+				left:-130%;
+				position:relative;
+			}
+			.intro p{
+				width: 50%;
+				margin: 0 auto;
+				font-size: 1.5em;
+			}
+		</style>
+		<script src="http://www.playwx.com/hd/static/common/js/jquery-1.10.2.min.js"></script>
+		<script src="../jquery-ui.min.js"></script>
+
+		<script type="text/javascript" src="jquery.fullPage.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('fullpage').fullpage({
+					slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#ccddff', 'whitesmoke'],
+					anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+					menu: '#menu',
+					easing:'easeOutBack',
+					loopBottom:true,
+					loopTop:true,
+					afterLoad:function(anchorLink,index){
+						if(index == 2){
+							$('#slide1').find("img").delay(1).animate({
+								left:'0%'
+							},700,'easeOutExpo');
+
+							$('#slide1').find("p").delay(1).animate({
+								left:'0%'
+							},700,'easeOutBack');
+
+							$('#slide1').find("h1").delay(1).animate({
+								left:'0%'
+							},700,'easeInBack');
+						}
+						if(index == 3){
+							$('#section2').find("img").delay(1).animate({
+								left:'0%'
+							},700,'easeInBounce');
+
+							$('#section2').find("p").delay(1).animate({
+								left:'0%'
+							},700,'easeInOutExpo');
+
+							$('#section2').find("h1").delay(1).animate({
+								left:'0%'
+							},700,'easeOutCirc');
+						}
+						if(index == 4){
+							$('#section3').find("img").delay(1).animate({
+								left:"0%"
+							},700,'easeInOutCubic');
+
+							$('#section3').find("p").delay(1).animate({
+								left:'0%'
+							},700,'easeInOutQuart');
+
+							$('#section3').find("h1").delay(1).animate({
+								left:'0%'
+							},700,'easeOutQuint');
+						}
+					},
+					onLeave:function(index, direction){
+						if(index == 2){
+							$('#slide1').find("img").delay(1).animate({
+								left:'-130%'
+							},700,'easeOutExpo');
+							$('#slide1').find("p").delay(1).animate({
+								left:'-130%'
+							},700,'easeOutExpo');
+
+							$('#slide1').find("h1").delay(1).animate({
+								left:'-130%'
+							},700,'easeOutExpo');
+						}
+						if(index == 3){
+							$('#section2').find("img").delay(1).animate({
+								left:'-130%'
+							},700,'easeOutExpo');
+
+							$('#section2').find("p").delay(1).animate({
+								left:'-130%'
+							},700,'easeOutBack');
+
+							$('#section2').find("h1").delay(1).animate({
+								left:'-130%'
+							},700,'easeInBack');
+						}
+						if(index == 4){
+							$('#section3').find("img").delay(1).animate({
+								left:"-130%"
+							},700,'easeInBounce');
+
+							$('#section3').find("p").delay(1).animate({
+								left:'-130%'
+							},700,'easeInOutExpo');
+
+							$('#section3').find("h1").delay(1).animate({
+								left:'-130%'
+							},700,'easeOutCirc');
+						}
+					}
+
+				});
+			});
+		</script>
+	</head>
+	<body>
+
+
+		<ul id="menu">
+			<li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>
+			<li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+			<li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+			<li data-menuanchor="4thpage"><a href="#4thpage">Fourth slide</a></li>
+		</ul>
+
+
+		<div id="fullpage">
+
+			<div class="section" id="section0">
+				<h1>fullPage.js</h1>
+				<p>Create Beautiful Fullscreen Scrolling Websites</p>
+				<img src="imgs/fullPage.png" alt="fullPage" />
+			</div>
+
+
+			<div class="section" id="section1">
+			    <div class="slide" id="slide1">
+					<div class="intro">
+						<h1>Create Sliders</h1>
+						<p>Not only vertical scrolling but also horizontal scrolling. With fullPage.js you will be able to add horizontal sliders in the most simple way ever.</p>
+						<img src="imgs/slider.png" alt="slider" />
+					</div>
+				</div>
+
+			    <div class="slide" id="slide2">
+					<div class="intro">
+						<img src="imgs/1.png" alt="simple" />
+						<h1>Simple</h1>
+						<p>Easy to use. Configurable and customizable.</p>
+					</div>
+				</div>
+
+			    <div class="slide" id="slide3">
+					<div class="intro">
+						<img src="imgs/2.png" alt="Cool" />
+						<h1>Cool</h1>
+						<p>It just looks cool. Impress everybody with a simple and modern web design!</p>
+					</div>
+				</div>
+
+			    <div class="slide" id="slide4">
+					<div class="intro">
+						<img src="imgs/3.png" alt="Compatible" />
+						<h1>Compatible</h1>
+						<p>Working in modern and old browsers too! IE 8 users don't have the fault of using that horrible browser! Lets give them a chance to see your site in a proper way!</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="section" id="section2">
+				<div class="intro">
+					<h1>Example</h1>
+					<p>HTML markup example to define 4 sections.</p>
+					<img src="imgs/example2.png" alt="example" />
+				</div>
+			</div>
+
+			<div class="section" id="section3">
+				<div class="intro">
+					<h1>Working On Tablets</h1>
+					<p>
+						Designed to fit to different screen sizes as well as tablet and mobile devices.
+						<br /><br /><br /><br /><br /><br />
+					</p>
+				</div>
+				<img src="imgs/tablets.png" alt="tablets" />
+			</div>
+
+		</div>
+
+		
+	</body>
+</html>

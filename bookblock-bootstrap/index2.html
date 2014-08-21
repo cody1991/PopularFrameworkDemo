@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bookblock.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+
+
+                <div class="bb-custom-wrapper">
+
+                    <div id="bb-bookblock" class="bb-bookblock">
+                        <div class="bb-item">
+                            <div class="bb-custom-side">
+                                <p>Soufflé tootsie roll jelly beans. Sweet icing croissant dessert bear claw. Brownie dessert cheesecake danish jelly pudding bear claw soufflé.</p>
+                            </div>
+                            <div class="bb-custom-side">
+                                <p>Candy canes lollipop macaroon marshmallow gummi bears tiramisu. Dessert croissant cupcake candy canes. Bear claw faworki faworki lemon drops. Faworki marzipan sugar plum jelly-o marzipan jelly-o.</p>
+                            </div>
+                        </div>
+                        <div class="bb-item">
+                            <div class="bb-custom-side">
+                                <p>Croissant pudding gingerbread gummi bears marshmallow halvah. Wafer donut croissant. Cookie muffin jelly beans pie croissant croissant candy canes jelly marshmallow.</p>
+                            </div>
+                            <div class="bb-custom-side">
+                                <p>Wafer donut caramels chocolate caramels sweet roll. Gummi bears powder candy chocolate cake gummi bears icing wafer cupcake. Brownie cotton candy pastry chocolate wypas.</p>
+                            </div>
+                        </div>
+                        <div class="bb-item">
+                            <div class="bb-custom-side">
+                                <p>Marzipan dragée candy canes chocolate cake. Soufflé faworki jelly gingerbread cupcake. Powder gummies applicake.</p>
+                            </div>
+                            <div class="bb-custom-side">
+                                <p>Cotton candy caramels tootsie roll soufflé powder lemon drops carrot cake danish. Cotton candy candy canes fruitcake muffin gingerbread. Jujubes soufflé gingerbread donut donut.</p>
+                            </div>
+                        </div>
+                        <div class="bb-item">
+                            <div class="bb-custom-side">
+                                <p>Jujubes fruitcake tiramisu liquorice chocolate cake. Carrot cake faworki donut soufflé oat cake tootsie roll. Fruitcake fruitcake cake sweet pie jelly beans. Chocolate cake candy jujubes oat cake toffee croissant muffin.</p>
+                            </div>
+                            <div class="bb-custom-side">
+                                <p>Chocolate bar tiramisu marzipan. Croissant soufflé croissant lollipop liquorice dragée chupa chups carrot cake. Liquorice lollipop halvah toffee lollipop.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <nav>
+                        <a id="bb-nav-first" href="#" class="bb-custom-icon bb-custom-icon-first">First page</a>
+                        <a id="bb-nav-prev" href="#" class="bb-custom-icon bb-custom-icon-arrow-left">Previous</a>
+                        <a id="bb-nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right">Next</a>
+                        <a id="bb-nav-last" href="#" class="bb-custom-icon bb-custom-icon-last">Last page</a>
+                    </nav>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="http://www.playwx.com/hd/static/common/js/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/jquerypp.custom.js"></script>
+    <script src="js/jquery.bookblock.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+    var Page = (function() {
+
+        var config = {
+                $bookBlock: $('#bb-bookblock'),
+                $navNext: $('#bb-nav-next'),
+                $navPrev: $('#bb-nav-prev'),
+                $navFirst: $('#bb-nav-first'),
+                $navLast: $('#bb-nav-last')
+            },
+            init = function() {
+                config.$bookBlock.bookblock({
+                    speed: 1000,
+                    shadowSides: 0.8,
+                    shadowFlip: 0.4
+                });
+                initEvents();
+            },
+            initEvents = function() {
+
+                var $slides = config.$bookBlock.children();
+
+                // add navigation events
+                config.$navNext.on('click touchstart', function() {
+                    config.$bookBlock.bookblock('next');
+                    return false;
+                });
+
+                config.$navPrev.on('click touchstart', function() {
+                    config.$bookBlock.bookblock('prev');
+                    return false;
+                });
+
+                config.$navFirst.on('click touchstart', function() {
+                    config.$bookBlock.bookblock('first');
+                    return false;
+                });
+
+                config.$navLast.on('click touchstart', function() {
+                    config.$bookBlock.bookblock('last');
+                    return false;
+                });
+
+                // add swipe events
+                $slides.on({
+                    'swipeleft': function(event) {
+                        config.$bookBlock.bookblock('next');
+                        return false;
+                    },
+                    'swiperight': function(event) {
+                        config.$bookBlock.bookblock('prev');
+                        return false;
+                    }
+                });
+
+                // add keyboard events
+                $(document).keydown(function(e) {
+                    var keyCode = e.keyCode || e.which,
+                        arrow = {
+                            left: 37,
+                            up: 38,
+                            right: 39,
+                            down: 40
+                        };
+
+                    switch (keyCode) {
+                        case arrow.left:
+                            config.$bookBlock.bookblock('prev');
+                            break;
+                        case arrow.right:
+                            config.$bookBlock.bookblock('next');
+                            break;
+                    }
+                });
+            };
+
+        return {
+            init: init
+        };
+
+    })();
+    </script>
+    <script>
+    Page.init();
+    </script>
+
+</body>
+
+</html>
