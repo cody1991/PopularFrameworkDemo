@@ -4,9 +4,9 @@
     font-weight: 400;
     src: local('Sniglet Regular'), local('Sniglet-Regular'), url(zaGgxcO7SfusqT6GpDlcHg.woff) format('woff');
 }
-*{
-	margin:0;
-	padding:0;
+* {
+    margin: 0;
+    padding: 0;
 }
 body {
     overflow: hidden;
@@ -18,11 +18,12 @@ body {
 .nav {
     text-align: left;
     padding-left: 5px;
+    padding-right: 26px;
     padding-top: 20px;
 }
 .nav li a {
     border-radius: 1px;
-    font-size: 26px;
+    font-size: 20px;
     color: #fff;
     display: block;
     text-decoration: none;
@@ -66,6 +67,11 @@ body {
 .github_page {
     -webkit-animation: wobble 1s .2s ease both infinite;
     -moz-animation: wobble 1s .2s ease both infinite;
+}
+hr {
+    margin-top:3px;
+    margin-bottom:3px;
+    border-color: rgba(255, 255, 255, 0.2)
 }
 @-webkit-keyframes wobble {
     0% {
@@ -112,10 +118,4 @@ body {
     100% {
         -moz-transform: translateX(0%)
     }
-}
-
-
-
-hr{
-	border-color:rgba(255,255,255,0.2)
 }
