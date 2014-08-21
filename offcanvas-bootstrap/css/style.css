@@ -1,0 +1,41 @@
+.back {
+    background: rgba(0, 0, 0, 0.3);
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 999999;
+    -webkit-animation: shake 2s ease both infinite;
+    -moz-animation: shake 2s ease both;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 5px;
+}
+.back img {
+    width: 40px;
+    height: 40px;
+}
+@-webkit-keyframes shake {
+    0%, 100% {
+        -webkit-transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translateX(10px);
+    }
+}
+@-moz-keyframes shake {
+    0%, 100% {
+        -moz-transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -moz-transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        -moz-transform: translateX(10px);
+    }
+}
