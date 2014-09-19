@@ -33,6 +33,20 @@ html, body {
     width: 100%;
     -webkit-box-sizing: border-box;
 }
+.tip{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    background:rgba(0,0,0,0.5);
+    color:#fff;
+    z-index: 99999;
+    text-align: center;
+    font-size:14px;
+    line-height: 16px;
+    padding-top:5px;
+    padding-bottom: 5px;
+}
 #owl-demo1 ,.owl-stage-outer,.owl-stage,.owl-item,.item{
     height: 100%;
     width: 100%;
