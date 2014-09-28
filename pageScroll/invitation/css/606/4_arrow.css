@@ -1,0 +1,113 @@
+@CHARSET "UTF-8";
+/***提示箭头*****/
+.animateYl { display:block; position:absolute; z-index:9999; 
+}
+.animateYl .bg { display:block; width:100%; height:100%; border-radius:90px; background:rgba(0,0,0,0.3); }
+.animateYl01 {
+	padding-left:20px;
+	top:60%; right:-87px;
+	margin-top:-90px;
+	width:120px; height:180px; 
+	animation: move 3s infinite;
+	-moz-animation: move 3s infinite;
+	-webkit-animation: move 3s infinite;	
+	-o-animation: move 3s infinite;	
+}
+.animateYl02 {
+	padding-top:20px;
+	bottom:-84px; left:64%; 
+	margin-left:-65px;
+	width:130px; height:120px;
+	animation: move02 3s infinite;
+	-moz-animation: move02 3s infinite;
+	-webkit-animation: move02 3s infinite;	
+	-o-animation: move02 3s infinite;	
+}
+.animateYl .shou {
+	position:absolute; z-index:3;
+	transform:scale(0.5);
+	-webkit-transform:scale(0.5);
+}
+.animateYl .cyyle { position:absolute; z-index:2; opacity:0.1; 
+	animation: show 3s infinite;
+	-moz-animation: show 3s infinite;
+	-webkit-animation: show 3s infinite;	
+	-o-animation: show 3s infinite;
+
+	transform:scale(0.5);
+	-webkit-transform:scale(0.5);
+}
+.animateYl01 .cyyle { top:-17px; left:4px; }
+.animateYl01 .shou { top:-24px; left:13px; }
+.animateYl01 .bg { height:36px; }
+
+.animateYl02 .cyyle { top:2px; left:-17px; }
+.animateYl02 .shou { top:-2px; left:-15px; }
+.animateYl02 .bg { width:36px; }
+ 
+#arrow-h.hide_ { display:none; }
+#arrow-v.hide_ { display:none; }
+ 
+/**弹出框关闭按钮的效果**/
+@keyframes move {
+  from { width:120px; }
+  to { width:200px; }
+} 
+@-webkit-keyframes move  {
+  from { width:120px; }
+  to { width:200px; }
+}
+@-moz-keyframes move  {
+  from { width:120px; }
+  to { width:200px; }
+}
+@-o-keyframes move  {
+  from { width:120px; }
+  to { width:200px; }
+}
+@-ms-keyframes move  {
+  from { width:120px; }
+  to { width:200px; }
+}
+
+@keyframes move02 {
+  from { height:120px; }
+  to { height:200px; }
+} 
+@-webkit-keyframes move02  {
+  from { height:120px; }
+  to { height:200px; }
+}
+@-moz-keyframes move02  {
+  from { height:120px; }
+  to { height:200px; }
+}
+@-o-keyframes move02  {
+  from { height:120px; }
+  to { height:200px; }
+}
+@-ms-keyframes move02  {
+  from { height:120px; }
+  to { height:200px; }
+}
+
+@keyframes show {
+  from { opacity:0.1; }
+  to { opacity:1; }
+} 
+@-webkit-keyframes show  {
+  from { opacity:0.1; }
+  to { opacity:1; }
+}
+@-moz-keyframes show  {
+  from { opacity:0.1; }
+  to { opacity:1; }
+}
+@-o-keyframes show  {
+  from { opacity:0.1; }
+  to { opacity:1; }
+}
+@-ms-keyframes show  {
+  from { opacity:0.1; }
+  to { opacity:1; }
+}

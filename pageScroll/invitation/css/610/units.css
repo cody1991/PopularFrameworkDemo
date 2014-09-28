@@ -1,0 +1,137 @@
+/* 
+ *  轻App元件样式（组件级）
+ * ----------------------------------
+ *  作者：Charles
+ *  时间：2014-04-26
+ *  准则：NEC CSS规范
+ *  联系：16295853（qq）
+ *****************************************************************************************/
+/**
+ * loading
+ * -u-pageLoading
+ */
+.u-pageLoading { display:none; position:fixed; top:0; left:0; z-index:316154365; height:100%; width:100%; background:rgba(0,0,0,0.6); }
+.u-pageLoading img { position:absolute; top:40%; left:50%; height:100px; width:100px; margin:-50px 0 0 -50px; }
+
+/**
+ * 提示小纸条
+ * -u-note
+ */
+.u-note { position: fixed; left: 120px; top:50%; margin-top:-30px; width: 400px; padding: 15px 0; text-align: center; font-size: 26px; border-radius: 8px; opacity: 0; -webkit-transition: all 0.4s; -moz-transition: all 0.4s; transition: all 0.4s; }
+.u-note.error { background: #f48813; }
+.u-note.sucess { background: #55e224; }
+.u-note.z-show { opacity: 1; z-index: 316154365; }
+
+
+/*全局音频元件*/
+.u-globalAudio{color: #fff; text-decoration: none; font-size: 24px; position: fixed; left: 50%; margin-left: 248px;bottom: 28px;; display: block; z-index: 9999;}
+.u-globalAudio span{position: absolute; left: -60px; top: 10px; text-shadow: 1px 1px 1px #000; letter-spacing: 2px; -webkit-transition: all 0.2s linear; opacity: 0; -webkit-transform: translateX(-20px);}
+.u-globalAudio .icon-music{width: 54px; height: 54px; background: url(../../images/610/units-icons.png) 0px 0px; display: block;}
+.u-globalAudio.z-play .icon-music{-webkit-animation: reverseRotataZ 1.2s linear infinite;}
+.u-globalAudio span.z-show{opacity: 1; -webkit-transform: translateX(0px);}
+.u-globalAudio .coffee-steam-box{-webkit-transform: translate(-40px, -40px);}
+@-webkit-keyframes reverseRotataZ{
+	0%{-webkit-transform: rotateZ(0deg);}
+	100%{-webkit-transform: rotateZ(-360deg);}
+}
+@-webkit-keyframes rotataZ{
+	0%{-webkit-transform: rotateZ(0deg);}
+	100%{-webkit-transform: rotateZ(360deg);}
+}
+/*全局音频元件 end*/
+
+
+/*引导向上元件*/
+.u-guideTop{width: 40px; height: 50px; background: url(../../images/610/units-icons.png) -67px 0px; position: absolute; left: 50%; bottom: 50px; margin-left: -20px; display: block; z-index: 9998;}
+.u-guideTop.z-move{-webkit-animation: guideTop 1.5s infinite;}
+@-webkit-keyframes guideTop{
+	0%{-webkit-transform: translateY(42px); opacity: 0;}
+	60%{-webkit-transform: translateY(12px); opacity: 1;}
+	100%{-webkit-transform: translateY(0px); opacity: 0;}
+}
+
+.u-guidePrev,.u-guideNext{text-decoration: none; position: absolute; top: 40%; z-index: 9998; background: url(img/units-icons.png) -116px 0px; display: block; width: 28px; height: 48px; text-indent: 9999px;}
+.u-guidePrev{left: 18px;}
+.u-guideNext{right: 18px; -webkit-transform: rotateZ(180deg);}
+/*引导向上元件 end*/
+
+
+/*遮罩层元件*/
+.u-maskLayer{position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; background-color: rgba(0, 0, 0, 0.7); opacity: 0; -webkit-transition: all 0.5s; z-index: 9999;}
+.u-maskLayer.z-showing,
+.u-maskLayer.z-show{opacity: 1;}
+.u-maskLayer-close{width: 100px; height: 100px; background: rgba(255, 0, 0, 0.6);  border-radius: 50%; display: block; position: absolute; top: -30px; right: -30px; -webkit-transition: all 0.6s; -webkit-transform: translate(100%, -100%);}
+.u-maskLayer-close::after,
+.u-maskLayer-close::before{width: 42px; height: 4px; background-color: #fff; border-radius: 2px; content: ''; display: block; position: absolute; bottom: 35px; left: 15px; -webkit-transform: rotateZ(45deg);}
+.u-maskLayer .u-maskLayer-close::before{-webkit-transform: rotateZ(-45deg);}
+.u-maskLayer .u-maskLayer-close::after{-webkit-transform: rotateZ(45deg);}
+.u-maskLayer.z-show .u-maskLayer-close{-webkit-transform: translate(0%, 0%);}
+/*遮罩层元件*/
+
+
+/*tip提示元件*/
+.u-tip{background: rgba(0, 0, 0, 0.6); text-align: center; position: fixed; z-index: 99999; padding: 8px 30px; border-radius: 6px; top: 45%; left: 50%; color: #fff; font-size: 24px; font-family: '微软雅黒'; font-weight: normal; line-height: 28px;}
+/*tip提示元件*/
+
+/*地图元件*/
+.u-yunlaiMap{position: absolute; left: 0px; right: 0px; bottom: 0px; top: 12%; background: #fff; box-shadow: 0px 0px 500px 100px #333; -webkit-transition: all 0.5s; -webkit-transform: translateY(0%); z-index: 9999; overflow: hidden;}
+.u-yunlaiMap.z-hide{-webkit-transform: translateY(100%);}
+.u-yunlaiMap .baiduMap{width: 640px; height: 100%; -webkit-transform: scale(1.8);}
+.u-yunlaiMap .baiduMap .BMap_bubble_title{font-weight: bold; border-bottom: 1px dashed #999; padding-bottom: 5px; font-size: 16px;}
+.u-yunlaiMap .baiduMap .BMap_bubble_content{margin-top: 8px; font-size: 14px; line-height: 25px;}
+.u-yunlaiMap .baiduMap .BMap_bubble_content a{color: #1686C5;}
+.u-yunlaiMap .baiduMap .navigationButtons{margin: 12px 0px; text-align: center;}
+.u-yunlaiMap .baiduMap .navigationButtons a{font-size: 18px; border: 1px solid #666; padding: 2px 12px; background: #07A326; color: #fff; text-decoration: none; margin: 0px;}
+.u-yunlaiMap .baiduMap .navigationButtons a:nth-child(1){background: rgba(3, 151, 221, 0.8); border-radius: 5px 0px 0px 5px;}
+.u-yunlaiMap .baiduMap .navigationButtons a:nth-child(2){background: rgba(221, 81, 3, 0.8); border-left: none;}
+.u-yunlaiMap .baiduMap .navigationButtons a:nth-child(3){background: rgba(7, 163, 38, 0.8); border-left: none; border-radius: 0px 5px 5px 0px;}
+.u-yunlaiMap .baiduMap .navigationButtons a:nth-child(1):active{background: #0397DD;}
+.u-yunlaiMap .baiduMap .navigationButtons a:nth-child(2):active{background: #DD5103;}
+.u-yunlaiMap .baiduMap .navigationButtons a:nth-child(3):active{background: #07A326;}
+.u-yunlaiMap .baiduMap .BMap_noprint{-webkit-transform: scale(0.8);}
+.u-yunlaiMap .baiduMap .BMap_cpyCtrl{display: none;}
+.u-yunlaiMap .mapToolBar{font-size: 24px; padding-right: 12px; position: absolute; top: 0px; left: 0px; right: 0px; height: 65px; line-height: 65px; background: rgba(255, 255, 255, 0.7); box-shadow: 0px 1px 5px 0px #ccc; z-index: 1; overflow: hidden;}
+.u-yunlaiMap .mapToolBar a{text-decoration: none; color: #333; text-align: center;}
+.u-yunlaiMap .mapToolBar a.closeMap{float: left; display: inline-block; height: 65px; width: 80px; margin-right: -80px; font-size: 28px; background: rgba(255, 60, 60, 0.7); color: #fff;}
+.u-yunlaiMap .mapToolBar a.closeMap:active{background: rgba(255, 0, 0, 0.7);}
+.u-yunlaiMap .mapToolBar .navigationTip,
+.u-yunlaiMap .mapToolBar .navigationControl{float: right; display: none;}
+.u-yunlaiMap .mapToolBar .navigationTip i{display: inline-block; vertical-align: sub; width: 24px; height: 24px; margin-right: 6px;}
+.u-yunlaiMap .mapToolBar .navigationTip i.icon-loading{background: url('img/yunlaiMap-loading.gif'); width: 27px; height: 29px;}
+.u-yunlaiMap .mapToolBar .navigationTip i.icon-info{background: url('img/yunlaiMap-info.png');}
+.u-yunlaiMap .mapToolBar .navigationTip i.icon-success{background: url('img/yunlaiMap-success.png');}
+.u-yunlaiMap .mapToolBar .navigationTip i.icon-error{background: url('img/yunlaiMap-error.png');}
+.u-yunlaiMap .mapToolBar .navigationControl a{height: 45px; line-height: 45px; border: 1px solid #999; border-left-width: 0px; padding: 0px 15px; display: inline-block; background: rgba(252, 255, 229, 0.6);}
+.u-yunlaiMap .mapToolBar .navigationControl a:first-child{border-radius: 5px 0px 0px 5px; border-left-width: 1px;}
+.u-yunlaiMap .mapToolBar .navigationControl a:last-child{border-radius: 0px 5px 5px 0px;}
+.u-yunlaiMap .mapToolBar .navigationControl a.z-current{background: rgba(0, 151, 0, 0.7); color: #fff;}
+.u-yunlaiMap .mapToolBar .navigationControl a:nth-child(1).z-current{background: rgba(3, 151, 221, 0.7);}
+.u-yunlaiMap .mapToolBar .navigationControl a:nth-child(2).z-current{background: rgba(221, 81, 3, 0.7);}
+.u-yunlaiMap .mapRoutePanel{position: absolute; top: 65px; bottom: 0px; left: 0px; width: 480px; background: #fff; border-right: 1px solid #DBDBDB; box-shadow: 0px 2px 4px 0px #ccc; z-index: 1; -webkit-transition: all 0.5s; -webkit-transform: translateX(-480px);}
+.u-yunlaiMap .mapRoutePanel .routeResult{width: 100%; height: 100%; overflow: auto;}
+.u-yunlaiMap .mapRoutePanel .noRouteInfo{margin: 50px 0px; text-align: center; font-size: 28px; color: #ccc;}
+.u-yunlaiMap .mapRoutePanel .toggle{display: block; width: 30px; height: 54px; background: url(img/yunlaiMap-icons.png) 0px -30px; position: absolute; right: -30px; top: 45%;}
+.u-yunlaiMap .mapRoutePanel.z-show{-webkit-transform: translateX(0px);}
+.u-yunlaiMap .mapRoutePanel.z-show .toggle{background-position: -30px -30px;}
+/*地图元件 end*/
+
+
+/*图标样式*/
+
+/*图标样式 end*/
+
+
+/*功能类*/
+.f-mb-15{margin-bottom: 15px;}
+.f-mb-22{margin-bottom: 22px;}
+
+.f-t-l{text-align: left;}
+.f-t-c{text-align: center;}
+.f-t-r{text-align: right;}
+
+.f-hide{display: none;}
+
+.f-fixed{position: fixed; top: 0px; bottom: 0px; left: 0px; right: 0px;}
+.f-fixedTop{position: fixed; top: 0px; left: 0px; right: 0px; z-index: 1;}
+.f-fixedBottom{position: fixed; bottom: 0px; left: 0px; right: 0px; z-index: 1;}
+/*功能类 end*/
