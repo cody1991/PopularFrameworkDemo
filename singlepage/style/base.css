@@ -14,7 +14,7 @@ body {
     line-height: 1;
 }
 html {
-    --webkit-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
 }
 ol, ul {
     list-style: none;
