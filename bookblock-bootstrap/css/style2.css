@@ -71,7 +71,7 @@ html, body {
     perspective: 2000px;
 }
 .bb-custom-side {
-    width: 50%;
+    width: 100%;
     float: left;
     height: 100%;
     overflow: hidden;
