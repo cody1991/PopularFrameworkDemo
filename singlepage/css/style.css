@@ -1,8 +1,3 @@
-a,
-button,
-input {
-  outline: 0;
-}
 html,
 h1,
 h2,
@@ -61,18 +56,15 @@ textarea {
     font-size: 1250%;
   }
 }
-body {
-  font-size: 0.12rem;
-}
 .container {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   font-family: 'Microsoft YaHei', sans-serif;
-  box-sizing: border-box;
   position: relative;
   min-width: 320px;
   max-width: 640px;
   margin: 0 auto;
+  font-size: 0.16rem;
 }
